@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Layanan | HumbaCenter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="header-left">
+                <span class="date-time" id="dateTime"></span>
+            </div>
+            <div class="header-right">
+                <a href="profile.html" class="header-link">Tentang Kami</a>
+                <a href="#" class="header-link">Kontak</a>
+                <a href="#" class="header-link">Berlangganan</a>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="/design/logo.png" alt="Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>HumbaCenter</h1>
+                        <p>Pusat Layanan Terintegrasi Kemenag Sumba Timur</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-weather">
+                <div class="search-box">
+                    <input type="text" placeholder="Cari layanan, kategori, atau topik..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="weather-info">
+                    <i class="fas fa-cloud-sun"></i>
+                    <div class="weather-text">
+                        <span class="temp">28°C</span>
+                        <span class="location">Jakarta, Indonesia</span>
+                    </div>
+                </div>
+                <button class="subscribe-btn">
+                    <i class="fas fa-bell"></i> Berlangganan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="nav-home"><i class="fas fa-home"></i></a>
+                <a href="profile.html" class="nav-link">Profil</a>
+                <a href="layanan.html" class="nav-link">Layanan</a>
+                <a href="filter.html" class="nav-link">Filter</a>
+                <a href="cari.html" class="nav-link">Cari</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+            </div>
+        </div>
+    </nav>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="page-hero">
+            <div class="container">
+                <span class="badge badge-featured">Cari Layanan</span>
+                <h1>Temukan layanan publik Kemenag Sumba Timur dengan cepat.</h1>
+                <p>Gunakan pencarian cepat untuk menemukan layanan administrasi, konsultasi, dan informasi layanan yang Anda butuhkan.</p>
+            </div>
+        </section>
+
+        <section class="container page-content">
+            <div class="page-card">
+                <div class="section-header">
+                    <h2 class="section-title-main">Daftar Lengkap Layanan</h2>
+                </div>
+                <!-- <div class="search-panel">
+                    <select>
+                        <option>Semua Kategori</option>
+                        <option>Nasional</option>
+                        <option>Pendidikan</option>
+                        <option>Haji & Umrah</option>
+                    </select>
+                    <input type="text" placeholder="Ketik kata kunci layanan...">
+                    <button class="btn btn-primary">Cari</button>
+                    <button class="btn btn-secondary">Reset</button>
+                </div> -->
+
+                <div class="result-list">
+                    <article class="result-card">
+                        <div>
+                            <h3>Informasi Layanan Administrasi Terbaru</h3>
+                            <p>Gunakan layanan HumbaCenter untuk mengurus dokumen dan administrasi dengan mudah.</p>
+                        </div>
+                        <div class="result-meta">
+                            <span>Administrasi</span>
+                            <span>12 menit lalu</span>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <div>
+                            <h3>Dukungan Pendidikan Madrasah Semakin Kuat</h3>
+                            <p>Program pembinaan guru dan madrasah kini didukung dengan informasi layanan terintegrasi.</p>
+                        </div>
+                        <div class="result-meta">
+                            <span>Pendidikan</span>
+                            <span>1 jam lalu</span>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <div>
+                            <h3>Layanan Pendaftaran Haji dan Umrah Lebih Cepat</h3>
+                            <p>Informasi pendaftaran dan persiapan kini tersedia dalam satu layanan terpusat.</p>
+                        </div>
+                        <div class="result-meta">
+                            <span>Haji & Umrah</span>
+                            <span>3 jam lalu</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/design/logo.png" alt="Logo">
+                        <h4>HumbaCenter</h4>
+                        <p>Pusat Layanan Terintegrasi Kemenag Sumba Timur</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Tentang</h5>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Tim Layanan</a></li>
+                        <li><a href="#">Syarat Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Informasi</h5>
+                    <ul>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Iklan</a></li>
+                        <li><a href="#">Kontak Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Layanan</h5>
+                    <ul>
+                        <li><a href="#">Berlangganan</a></li>
+                        <li><a href="#">Info Layanan</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Ikuti Kami</h5>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Newsletter</h5>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Masukkan email Anda" class="newsletter-input">
+                        <button class="newsletter-btn">Kirim</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HumbaCenter. Semua Hak Dilindungi Undang-Undang.</p>
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>                padding: 24px 0;
+            }
+
+            .search-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .result-card {
+                grid-template-columns: 1fr;
+            }
+
+            .status {
+                width: fit-content;
+            }
+
+            .detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <h1>Pencarian Data PTSP</h1>
+            <p>Cari data permohonan berdasarkan identitas pemohon, layanan, instansi, unit, nomor HP, atau status.</p>
+        </header>
+        <section class="search-panel">
+            
+
+            <input type="text" id="link" placeholder="Masukkan kata kunci" aria-label="Kata kunci pencarian">
+            <button id="tombolCari" onclick="loadData()">Load Data</button>
+        </section>
+        <section class="search-panel">
+            <select id="keyPencarian" aria-label="Pilih key pencarian">
+                <option value="respond">Respond</option>
+                <option value="id">ID</option>
+                <option value="kode">Kode</option>
+                <option value="nama_pemohon">Nama Pemohon</option>
+                <option value="unit">Unit</option>
+                <option value="satker">Satker</option>
+                <option value="layanan">Layanan</option>
+                <option value="instansi">Instansi</option>
+                <option value="no_hp_pemohon">No HP Pemohon</option>
+                <option value="catatan_permohonan">Catatan Permohonan</option>
+                <option value="tgl_permohonan">Tanggal Permohonan</option>
+                <option value="status">Status</option>
+            </select>
+
+            <input type="text" id="keyword" placeholder="Masukkan kata kunci" aria-label="Kata kunci pencarian">
+            <button id="tombolCari">Cari</button>
+            <button class="export-button" id="tombolExport" disabled>Export JSON</button>
+        </section>
+
+        <div class="summary">
+            <span id="infoHasil">Memuat data...</span>
+            <span class="result-count" id="jumlahHasil">0 data</span>
+        </div>
+
+        <ul class="results" id="hasilPencarian"></ul>
+    </main>
+
+    <script>
+        let responds = [
+'Melkianus Nukku Hanggalang',
+'Arni Ndakadjawal,S.Pd',
+'Dewi Aryanti Guna manggil ',
+'Paulus Siprianus Pah Moy ',
+'Meylina Rosniyati Day, S.Pd.K',
+'Rahel Ndembi Tamar',
+'Endrin K. Ataria, S.Pd',
+'Ayuanri Rambu Kuanga Mbabu ',
+'Febi Roshilda Bolla',
+'Astry Priskila Rafael',
+'Emilia kandokang madik',
+'Erni Nggaji Nandang, S.Pd',
+'Yurniati Ngana Atanau,S.PdK.,Gr',
+'Andriantini mburu manggil',
+'Filce Ratna Sari Dewi,S.Pd.K',
+'Nur Afni Oktaviana Djami Lele',
+'Matelda Tinggi Nalu',
+'Yestiany Elsy Hamapati',
+'MERI BANJA ORU.S,Pd.K',
+'YORIM  YEFTA YUN NEOMBANU, S. Pd. K., Gr',
+'Avlin A.R.F Djami',
+'Sriwulan Ndakumbora, S.pd',
+'Ester Tamar Pangambang, S. Pd. K',
+'YAKOBA PINDI ANA JAWA RATUNDIMA, S. Pd. K',
+'Apriani Hara Adji.S.Pd.K',
+'yadius pura tanya,s,pd,k',
+'Ormas lu walangada',
+'Haryati Zainuddin',
+'Yuningsih Landutana, S. PdK',
+'Adriana Rohi Djami',
+'Yonathan Bangu Kale',
+'Soleman Lakingunju ',
+'Semuel Hadameha',
+'Etni Alon Lopo,S.Pd',
+'MIA JERA ATANDAU,S.Pd',
+'Ermilinda Hanja Ana Wenju ',
+'Murtiana Maharani',
+'Kanora Hamumeha ',
+'Bernadeta Dhey, S.Pd',
+'Aurelius Paul Mbete, S. Fil',
+'ERNIYATIKALITA MBORU',
+'Urbanus Ba e, S.Pd',
+'Asnat Mbitu Anajawa, S.Pd.K',
+'Ona Maria Utang',
+'Novita Djami',
+'Eflin ipa elap',
+'Ermilinda Hanja Ana Wenju ',
+'Simponi Mude,D.PdK',
+'Antonia koro dimu s,pd',
+'Obet Katauhi Ndula Andung, S.Pd',
+'Obet Katauhi Ndula Andung, S.Pd',
+'Made Surya Wartini ',
+'Ermilinda Hanja Ana Wenju ',
+'Rouli Dewi Cyntiana',
+'Hat Oktavia Dede Koly, S. Pd',
+'Imelda Pige Rade ',
+'Herlina Danga Doy, S.Pd.K',
+'Welhelmina koro Wila,S.Pd.K',
+'Ani konga naha',
+
+
+        ]
+        let dataPtsp = [];
+        let hasilTerakhir = [];
+        const keyPencarian = document.getElementById("keyPencarian");
+        const inputKeyword = document.getElementById("keyword");
+        const tombolCari = document.getElementById("tombolCari");
+        const tombolExport = document.getElementById("tombolExport");
+        const hasilPencarian = document.getElementById("hasilPencarian");
+        const infoHasil = document.getElementById("infoHasil");
+        const jumlahHasil = document.getElementById("jumlahHasil");
+        const linkU = document.getElementById("link");
+
+        function formatTanggal(tanggal) {
+            if (!tanggal) {
+                return "-";
+            }
+
+            return tanggal;
+        }
+
+        function escapeHTML(value) {
+            return String(value || "-")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function normalisasiNama(value) {
+            return String(value || "")
+                .toLowerCase()
+                .replace(/[.,]/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+        function namaAdaDiResponds(namaPemohon) {
+            const nama = normalisasiNama(namaPemohon);
+
+            return responds.some(function (respond) {
+                const namaRespond = normalisasiNama(respond);
+
+                return nama.includes(namaRespond) || namaRespond.includes(nama);
+            });
+        }
+
+        function tampilkanHasil(data) {
+            hasilTerakhir = data;
+            hasilPencarian.innerHTML = "";
+            jumlahHasil.textContent = `${data.length} data`;
+            tombolExport.disabled = data.length === 0;
+
+            if (data.length === 0) {
+                hasilPencarian.innerHTML = '<li class="empty">Data tidak ditemukan</li>';
+                return;
+            }
+
+            data.forEach(function (item) {
+                const li = document.createElement("li");
+                li.className = "result-card";
+                li.innerHTML = `
+                    <div class="result-main">
+                        <h2>${escapeHTML(item.nama_pemohon)}</h2>
+                        <div class="meta">
+                            <span class="chip">${escapeHTML(item.unit)}</span>
+                            <span class="chip">${escapeHTML(item.layanan)}</span>
+                        </div>
+                        <div class="detail">
+                            <span><strong class="label">Instansi </strong>${escapeHTML(item.instansi)}</span>
+                            <span><strong class="label">Satker </strong>${escapeHTML(item.satker)}</span>
+                            <span><strong class="label">No HP Pemohon </strong>${escapeHTML(item.no_hp_pemohon)}</span>
+                            <span><strong class="label">Tanggal Permohonan </strong>${escapeHTML(formatTanggal(item.tgl_permohonan))}</span>
+                            <span class="wide"><strong class="label">Catatan Permohonan </strong>${escapeHTML(item.catatan_permohonan)}</span>
+                        </div>
+                    </div>
+                    <span class="status">${escapeHTML(item.status)}</span>
+                `;
+                hasilPencarian.appendChild(li);
+            });
+        }
+
+        function cariData() {
+            const key = keyPencarian.value;
+            const keyword = inputKeyword.value.trim().toLowerCase();
+            const keywordNama = normalisasiNama(inputKeyword.value);
+
+            const hasil = dataPtsp.filter(function (item) {
+                if (key === "respond") {
+                    const cocokRespond = namaAdaDiResponds(item.nama_pemohon);
+
+                    if (keywordNama === "") {
+                        return cocokRespond;
+                    }
+
+                    return cocokRespond && normalisasiNama(item.nama_pemohon).includes(keywordNama);
+                }
+
+                if (keyword === "") {
+                    return true;
+                }
+
+                return String(item[key] || " ").toLowerCase().includes(keyword);
+            });
+
+            infoHasil.textContent = keyword === ""
+                ? key === "respond" ? "Menampilkan data dari variabel responds" : "Menampilkan semua data"
+                : `Hasil pencarian untuk "${inputKeyword.value}"`;
+
+            tampilkanHasil(hasil);
+        }
+
+        function exportHasilKeJSON() {
+            if (hasilTerakhir.length === 0) {
+                return;
+            }
+
+            const dataExport = {
+                total: hasilTerakhir.length,
+                filter: keyPencarian.value,
+                keyword: inputKeyword.value.trim(),
+                data: hasilTerakhir
+            };
+            const json = JSON.stringify(dataExport, null, 2);
+            const blob = new Blob([json], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            const tanggal = new Date().toISOString().slice(0, 10);
+
+            link.href = url;
+            link.download = `hasil-pencarian-ptsp-${tanggal}.json`;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        tombolCari.addEventListener("click", cariData);
+        tombolExport.addEventListener("click", exportHasilKeJSON);
+        keyPencarian.addEventListener("change", cariData);
+        inputKeyword.addEventListener("keyup", cariData);
+
+        // function loadData() {
+        //     getApiData();
+
+        // }
+        // async function getApiData() {
+        //     const url = linkU.value; // Get the URL from the input field
+            
+        //     try {
+        //         const response = await fetch(url);
+                
+        //         // Check if the network request was successful (status 200-299)
+        //         if (!response.ok) {
+        //         throw new Error(`HTTP error! Status: ${response.status}`);
+        //         }
+                
+        //         // Parse the data as JSON
+        //         const data = await response.json();
+        //         console.log(data);
+        //         dataPtsp=data 
+                
+        //     } catch (error) {
+        //         console.error('Failed to get data:', error);
+        //     }
+        // }
+
+        fetch("ptsp.json")
+        //fetch(link.value)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("File tidak ditemukan");
+                }
+
+                return response.json();
+            })
+            .then(function (result) {
+                const data = Array.isArray(result.data) ? result.data : [];
+
+                dataPtsp = data;
+
+                cariData();
+            })
+            .catch(function () {
+                infoHasil.textContent = "Gagal memuat data";
+                jumlahHasil.textContent = "0 data";
+                hasilPencarian.innerHTML = '<li class="empty">Gagal membaca file ptsp.json. Jalankan lewat server lokal seperti Live Server.</li>';
+            });
+    </script>
+</body>
+</html>
