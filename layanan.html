@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Publik | HumbaCenter</title>
+    <title>Cari Layanan | HumbaCenter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Accordion styles for layanan list */
+        .result-list { display: grid; gap: 12px; }
+        .result-card { border: 1px solid #e6e6e6; border-radius: 8px; overflow: hidden; }
+        .accordion-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 16px; background: white; border: none; cursor: pointer; font: inherit; text-align: left; }
+        .accordion-toggle:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+        .accordion-summary h3 { margin: 0 0 6px 0; font-size: 1.05rem; }
+        .accordion-summary p { margin: 0; color: #555; }
+        .result-meta { display: flex; gap: 12px; color: #888; font-size: 0.9rem; align-items: center; }
+        .chev { transition: transform 0.2s ease; color: #666; margin-left: 12px; }
+        .accordion-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+        .accordion-panel { padding: 0 16px 16px 16px; background: #fbfbfb; }
+    </style>
 </head>
 <body>
     <div class="top-header">
@@ -51,12 +64,12 @@
                     <i class="fas fa-cloud-sun"></i>
                     <div class="weather-text">
                         <span class="temp">28°C</span>
-                        <span class="location">Jakarta, Indonesia</span>
+                        <span class="location">Sumba Timur, Indonesia</span>
                     </div>
                 </div>
-                <button class="subscribe-btn">
+                <!-- <button class="subscribe-btn">
                     <i class="fas fa-bell"></i> Berlangganan
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -65,13 +78,13 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="nav-home"><i class="fas fa-home"></i></a>
+            
+                <!-- <a href="layanan.html" class="nav-link">Layanan</a>
+                <a href="filter.html" class="nav-link">Layanan2</a> -->
                 <a href="layanan.html" class="nav-link">Layanan</a>
-                <a href="filter.html" class="nav-link">Layanan2</a>
-                <a href="cari.html" class="nav-link">Layanan3</a>
                 <a href="saran.html" class="nav-link">Saran</a>
-                <a href="skm.html" class="nav-link">SKM</a>
-                <a href="spkp.html" class="nav-link">SPKP</a>
-                <a href="spak.html" class="nav-link">SPAK</a>
+                <a href="survei.html" class="nav-link">Survei</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
             </div>
         </div>
     </nav>
@@ -79,194 +92,136 @@
         </div>
     </nav>
 
-    <main>
-        <section class="service-hero">
+    <main class="page-shell">
+        <section class="page-hero">
             <div class="container">
-                <div class="service-hero-content">
-                    <span class="badge badge-featured">Layanan Publik</span>
-                    <h1>Beragam layanan publik yang tersedia untuk masyarakat dan mitra kerja.</h1>
-                    <p>Kantor Kementerian Agama menyediakan layanan berbasis informasi, administrasi, pembinaan, dan dukungan masyarakat agar setiap kebutuhan dapat tersampaikan dengan cepat dan aman.</p>
-                </div>
+                <span class="badge badge-featured">Cari Layanan</span>
+                <h1>Temukan layanan publik Kemenag Sumba Timur dengan cepat.</h1>
+                <p>Gunakan pencarian cepat untuk menemukan layanan administrasi, konsultasi, dan informasi layanan yang Anda butuhkan.</p>
             </div>
-
         </section>
 
-        <section class="container">
-            
-            <div class="service-grid">
-                
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>Pelayanan Administrasi</h3>
-                    <p>Pengurusan dokumen, surat resmi, dan administrasi kepegawaian maupun kelembagaan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pembuatan surat resmi</li>
-                        <li><i class="fas fa-check"></i> Verifikasi dokumen</li>
-                        <li><i class="fas fa-check"></i> Informasi tata usaha</li>
-                    </ul>
-                </article>
+        <section class="container page-content">
+            <div class="page-card">
+                <div class="section-header">
+                    <h2 class="section-title-main">Daftar Lengkap Layanan</h2>
+                </div>
+                <!-- <div class="search-panel">
+                    <select>
+                        <option>Semua Kategori</option>
+                        <option>Nasional</option>
+                        <option>Pendidikan</option>
+                        <option>Haji & Umrah</option>
+                    </select>
+                    <input type="text" placeholder="Ketik kata kunci layanan...">
+                    <button class="btn btn-primary">Cari</button>
+                    <button class="btn btn-secondary">Reset</button>
+                </div> -->
 
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h3>Pelayanan Pendidikan</h3>
-                    <p>Layanan terkait madrasah, pembinaan guru, dan dukungan program pendidikan keagamaan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pendampingan madrasah</li>
-                        <li><i class="fas fa-check"></i> Informasi beasiswa</li>
-                        <li><i class="fas fa-check"></i> Program pelatihan</li>
-                    </ul>
-                </article>
+                <div class="result-list">
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Sertifikasi dan NRG Guru</h3>
+                                <!-- <p>Gunakan layanan HumbaCenter untuk mengurus dokumen dan administrasi dengan mudah.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Administrasi</span>
+                                <span>12 menit lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Detail layanan administrasi termasuk persyaratan, alur, dan kontak petugas. Silakan klik tautan layanan untuk informasi lebih lanjut.</p>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Informasi PPG dan Akreditasi</h3>
+                                <!-- <p>Program pembinaan guru dan madrasah kini didukung dengan informasi layanan terintegrasi.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Pendidikan</span>
+                                <span>1 jam lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Rincian program pembinaan, jadwal kegiatan, dan panduan pendaftaran pelatihan tersedia di sini.</p>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Rohaniawan Sumpah Jabatan</h3>
+                                <!-- <p>Informasi pendaftaran dan persiapan kini tersedia dalam satu layanan terpusat.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Haji & Umrah</span>
+                                <span>3 jam lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Informasi syarat pendaftaran, biaya, dan jadwal keberangkatan dapat diakses melalui panel ini atau langsung ke kantor Kemenag setempat.</p>
+                        </div>
+                    </article>
 
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-kaaba"></i></div>
-                    <h3>Layanan Haji & Umrah</h3>
-                    <p>Informasi pendaftaran, persiapan, serta bantuan terkait perjalanan ibadah haji dan umrah.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pendaftaran jemaah</li>
-                        <li><i class="fas fa-check"></i> Informasi perjalanan</li>
-                        <li><i class="fas fa-check"></i> Konsultasi layanan</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Pelayanan Masyarakat</h3>
-                    <p>Dukungan sosial, bimbingan masyarakat, dan koordinasi untuk kebutuhan publik yang bersifat lintas sektor.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Konsultasi masyarakat</li>
-                        <li><i class="fas fa-check"></i> Pendampingan layanan</li>
-                        <li><i class="fas fa-check"></i> Koordinasi program</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Informasi & Konsultasi</h3>
-                    <p>Saluran komunikasi cepat untuk menanyakan kebijakan, program, dan kebutuhan pelayanan resmi.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Hotline informasi</li>
-                        <li><i class="fas fa-check"></i> Konsultasi daring</li>
-                        <li><i class="fas fa-check"></i> Layanan respon cepat</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Pengaduan & Umpan Balik</h3>
-                    <p>Tempat untuk menyampaikan pengaduan, saran, dan masukan demi peningkatan kualitas layanan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pengaduan resmi</li>
-                        <li><i class="fas fa-check"></i> Respon petugas</li>
-                        <li><i class="fas fa-check"></i> Tindak lanjut</li>
-                    </ul>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Informasi & Konsultasi</h3>
-                    <p>Saluran komunikasi cepat untuk menanyakan kebijakan, program, dan kebutuhan pelayanan resmi.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Hotline informasi</li>
-                        <li><i class="fas fa-check"></i> Konsultasi daring</li>
-                        <li><i class="fas fa-check"></i> Layanan respon cepat</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Pengaduan & Umpan Balik</h3>
-                    <p>Tempat untuk menyampaikan pengaduan, saran, dan masukan demi peningkatan kualitas layanan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pengaduan resmi</li>
-                        <li><i class="fas fa-check"></i> Respon petugas</li>
-                        <li><i class="fas fa-check"></i> Tindak lanjut</li>
-                    </ul>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-signature"></i></div>
-                    <h3>Pelayanan Administrasi</h3>
-                    <p>Pengurusan dokumen, surat resmi, dan administrasi kepegawaian maupun kelembagaan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pembuatan surat resmi</li>
-                        <li><i class="fas fa-check"></i> Verifikasi dokumen</li>
-                        <li><i class="fas fa-check"></i> Informasi tata usaha</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h3>Pelayanan Pendidikan</h3>
-                    <p>Layanan terkait madrasah, pembinaan guru, dan dukungan program pendidikan keagamaan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pendampingan madrasah</li>
-                        <li><i class="fas fa-check"></i> Informasi beasiswa</li>
-                        <li><i class="fas fa-check"></i> Program pelatihan</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-kaaba"></i></div>
-                    <h3>Layanan Haji & Umrah</h3>
-                    <p>Informasi pendaftaran, persiapan, serta bantuan terkait perjalanan ibadah haji dan umrah.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pendaftaran jemaah</li>
-                        <li><i class="fas fa-check"></i> Informasi perjalanan</li>
-                        <li><i class="fas fa-check"></i> Konsultasi layanan</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Pelayanan Masyarakat</h3>
-                    <p>Dukungan sosial, bimbingan masyarakat, dan koordinasi untuk kebutuhan publik yang bersifat lintas sektor.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Konsultasi masyarakat</li>
-                        <li><i class="fas fa-check"></i> Pendampingan layanan</li>
-                        <li><i class="fas fa-check"></i> Koordinasi program</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Informasi & Konsultasi</h3>
-                    <p>Saluran komunikasi cepat untuk menanyakan kebijakan, program, dan kebutuhan pelayanan resmi.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Hotline informasi</li>
-                        <li><i class="fas fa-check"></i> Konsultasi daring</li>
-                        <li><i class="fas fa-check"></i> Layanan respon cepat</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Pengaduan & Umpan Balik</h3>
-                    <p>Tempat untuk menyampaikan pengaduan, saran, dan masukan demi peningkatan kualitas layanan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pengaduan resmi</li>
-                        <li><i class="fas fa-check"></i> Respon petugas</li>
-                        <li><i class="fas fa-check"></i> Tindak lanjut</li>
-                    </ul>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Informasi & Konsultasi</h3>
-                    <p>Saluran komunikasi cepat untuk menanyakan kebijakan, program, dan kebutuhan pelayanan resmi.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Hotline informasi</li>
-                        <li><i class="fas fa-check"></i> Konsultasi daring</li>
-                        <li><i class="fas fa-check"></i> Layanan respon cepat</li>
-                    </ul>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Pengaduan & Umpan Balik</h3>
-                    <p>Tempat untuk menyampaikan pengaduan, saran, dan masukan demi peningkatan kualitas layanan.</p>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Pengaduan resmi</li>
-                        <li><i class="fas fa-check"></i> Respon petugas</li>
-                        <li><i class="fas fa-check"></i> Tindak lanjut</li>
-                    </ul>
-                </article>
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Verifikasi Arah Kiblat</h3>
+                                <!-- <p>Informasi pendaftaran dan persiapan kini tersedia dalam satu layanan terpusat.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Haji & Umrah</span>
+                                <span>3 jam lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Informasi syarat pendaftaran, biaya, dan jadwal keberangkatan dapat diakses melalui panel ini atau langsung ke kantor Kemenag setempat.</p>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Rehabilitasi Rumah  Ibadah</h3>
+                                <!-- <p>Informasi pendaftaran dan persiapan kini tersedia dalam satu layanan terpusat.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Haji & Umrah</span>
+                                <span>3 jam lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Informasi syarat pendaftaran, biaya, dan jadwal keberangkatan dapat diakses melalui panel ini atau langsung ke kantor Kemenag setempat.</p>
+                        </div>
+                    </article>
+                    <article class="result-card">
+                        <button class="accordion-toggle" aria-expanded="false">
+                            <div class="accordion-summary">
+                                <h3>Tujungan Guru Daerah 3T</h3>
+                                <!-- <p>Informasi pendaftaran dan persiapan kini tersedia dalam satu layanan terpusat.</p> -->
+                            </div>
+                            <!-- <div class="result-meta">
+                                <span>Haji & Umrah</span>
+                                <span>3 jam lalu</span>
+                            </div> -->
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-panel" hidden>
+                            <p>Informasi syarat pendaftaran, biaya, dan jadwal keberangkatan dapat diakses melalui panel ini atau langsung ke kantor Kemenag setempat.</p>
+                        </div>
+                    </article>
+                    <a href="#" target="_blank" class="filter-card">
+                        <i class="fas fa-book-open"></i>
+                        <h2>Selengkapnya</h2>
+                        <p>Semua layanan tersedia di sini.</p>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -333,5 +288,24 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.accordion-toggle').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    btn.setAttribute('aria-expanded', String(!expanded));
+                    const panel = btn.nextElementSibling;
+                    if (panel) panel.hidden = expanded;
+                });
+
+                btn.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-</html>
+</html>    

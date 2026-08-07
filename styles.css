@@ -2142,4 +2142,9 @@ body {
     .nav-wrapper {
         gap: 0;
     }
+
+    .capital {
+        color: var(--secondary-color);
+        font-color: var(--secondary-color);
+    }
 }
